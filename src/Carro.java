@@ -1,7 +1,7 @@
 public class Carro {
 	
-	public static final String Dominio = "Carro";
-
+	public static final String DOMINIO = "Carro";
+	
 	private String modelo;
 	private int quantidadePortas;
 	private String cor;
@@ -33,7 +33,7 @@ public class Carro {
 	}
 	public void setQuantidadePortas(int quantidadePortas) {
 		if (quantidadePortas<1){
-			System.out.println("Erro - Não pode ser criado com menos de uma porta");
+			System.out.println(Mensagens.MENSAGEM_ERRO_VALIDACAO_QUANTIDADE_PORTA);
 		}
 		else{
 			this.quantidadePortas = quantidadePortas;
@@ -41,7 +41,7 @@ public class Carro {
 		
 	}
 	public String getDominio() {
-		return Dominio;
+		return DOMINIO;
 	}
 	
 	
