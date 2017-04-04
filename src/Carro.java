@@ -3,7 +3,7 @@ public class Carro {
 	public static final String DOMINIO = "Carro";
 	
 	private String modelo;
-	private int quantidadePortas;
+	private Integer quantidadePortas;
 	private String cor;
 	private int quantidadeRodas;
 
@@ -28,9 +28,18 @@ public class Carro {
 	public void setQuantidadeRodas(int quantidadeRodas) {
 		this.quantidadeRodas = quantidadeRodas;
 	}
-	public int getQuantidadePortas() {
+	public Integer getQuantidadePortas() {
 		return quantidadePortas;
 	}
+	/*
+	  public Integer getQuantidadePortas() {
+	  	if(quantidadePortas==null){
+	  		return "";
+	  	}else{
+			return quantidadePortas.toString();
+		}
+	}
+	 */
 	public void setQuantidadePortas(int quantidadePortas) {
 		if (quantidadePortas<1){
 			System.out.println(Mensagens.MENSAGEM_ERRO_VALIDACAO_QUANTIDADE_PORTA);
@@ -43,7 +52,5 @@ public class Carro {
 	public String getDominio() {
 		return DOMINIO;
 	}
-	
-	
 	
 }
